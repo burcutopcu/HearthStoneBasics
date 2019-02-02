@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_nav_height">56dp</dimen>
+    <dimen name="main_margin">20dp</dimen>
+    <dimen name="detail_margin">10dp</dimen>
+    <dimen name="main_padding">15dp</dimen>
+</resources>

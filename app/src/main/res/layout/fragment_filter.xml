@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/card_classes_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:layout_margin="10dp"
+        android:popupBackground="@android:drawable/dialog_holo_light_frame" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_margin"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_margin"
+        android:text="@string/thereIsNoResult"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/filter_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

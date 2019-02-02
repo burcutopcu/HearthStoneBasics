@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            style="@style/HeaderBar"
+            android:elevation="4dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|start">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/toolbar_iv"
+                    android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbar_tv"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/detail_margin"
+                    android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_cv"
+            android:layout_marginTop="@dimen/detail_margin"
+            android:layout_below="@id/toolbar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/main_padding"
+                android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/card_iv"/>
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/player_class_ll"
+                              android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/player_class_tv"
+                            android:text="Player Class"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:id="@+id/player_class_value_tv"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/rarity_ll"
+                              android:layout_below="@id/player_class_ll"
+                              android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/rarity_tv"
+                            android:text="Rarity"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:id="@+id/rarity_value_tv"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/type_ll"
+                              android:layout_below="@id/rarity_ll"
+                              android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/type_tv"
+                            android:text="Type"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:id="@+id/type_value_tv"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/cost_ll"
+                              android:layout_below="@id/type_ll"
+                              android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/cost_tv"
+                            android:text="Cost"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:id="@+id/cost_value_tv"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_below="@id/cost_ll">
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/attack_value_tv"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Attack"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/health_value_tv"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Health"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/card_cv">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/card_cv"
+                android:layout_margin="@dimen/main_margin"
+                android:id="@+id/desc_rl">
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc_tv"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/detail_margin"
+                    android:text="Description"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/battlecry_value_tv"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/detail_margin"
+                    android:layout_below="@id/desc_tv"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flavor_tv"
+                    android:layout_below="@id/battlecry_value_tv"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/detail_margin"
+                    android:text="Flavor"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flavor_value_tv"
+                    android:layout_below="@id/flavor_tv"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/detail_margin"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

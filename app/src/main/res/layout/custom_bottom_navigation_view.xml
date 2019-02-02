@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:id="@+id/search_tab_ll"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_gravity="center"
+                  android:layout_weight="1">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/search_tab_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black_24dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/search_tab_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:id="@+id/filter_tab_ll"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_gravity="center"
+                  android:layout_weight="1">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_tab_iv"
+                android:src="@drawable/ic_filter_list_black_24dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_tab_tv"
+                android:text="Filter"/>
+
+    </LinearLayout>
+
+</merge>

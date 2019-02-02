@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/main_padding"
+        android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/hearthstoneplaceholder"
+            android:id="@+id/card_item_iv"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="4"
+                  android:layout_marginLeft="@dimen/detail_margin"
+                  android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_item_name_tv"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="hello"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_item_desc_tv"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="hello"/>
+
+    </LinearLayout>
+
+</LinearLayout>

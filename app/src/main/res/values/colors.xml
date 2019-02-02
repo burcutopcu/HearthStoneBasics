@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B0BEC5</color>
+    <color name="colorPrimaryDark">#607D8B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="bottom_nav_item_active_text_color">#000000</color>
+    <color name="bottom_nav_item_passive_text_color">#9f9f9f</color>
+
+    <color name="bottom_nav_item_active_background_color">#CFD8DC</color>
+    <color name="bottom_nav_item_passive_background_color">#ffffff</color>
+</resources>
