@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
 
     @Override
     public void initBottomNavView() {
-        this.mBottomNavigationViewManager.initializeBottomNavView(bottomNavigationView);
+        this.mBottomNavigationViewManager.initializeBottomNavView(bottomNavigationView) ;
     }
 
     @Override
