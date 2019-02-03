@@ -5,6 +5,7 @@ public interface MainActivityContract {
     interface View{
 
         void initBottomNavView();
+        void showGeneralClasses(String stClass);
         }
 
     interface Presenter {
