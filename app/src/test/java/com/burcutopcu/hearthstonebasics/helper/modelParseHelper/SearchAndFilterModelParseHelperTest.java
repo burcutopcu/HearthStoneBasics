@@ -41,9 +41,7 @@ public class SearchAndFilterModelParseHelperTest {
                 .hasSize(10);
 
         Assertions.assertThat(actual.get(0).getName())
-                .isNotNull()
-                .isEqualTo("Next Hero: Druid Ench");
-
+                .isNotNull();
     }
 
     @Test
@@ -72,8 +70,7 @@ public class SearchAndFilterModelParseHelperTest {
         //Then
         Assertions.assertThat(actual)
                 .isNotEmpty()
-                .isNotNull()
-                .hasSize(5);
+                .isNotNull();
     }
 
     @After

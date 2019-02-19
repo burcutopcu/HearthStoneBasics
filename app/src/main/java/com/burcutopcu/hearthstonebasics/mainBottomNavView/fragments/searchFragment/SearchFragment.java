@@ -4,10 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.*;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.*;
@@ -44,7 +41,6 @@ public class SearchFragment extends Fragment implements SearchFragmentContract.V
 
     @BindView(R.id.tv_no_result)
     AppCompatTextView noResultTv;
-
 
     @Inject
     SearchFragmentPresenter mPresenter;
@@ -100,6 +96,10 @@ public class SearchFragment extends Fragment implements SearchFragmentContract.V
         });
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
+        cartItemRv.addItemDecoration(dividerItemDecoration);
+
         cartItemRv.setLayoutManager(mLayoutManager);
         cartItemRv.setAdapter(adapter);
     }
@@ -147,10 +147,7 @@ public class SearchFragment extends Fragment implements SearchFragmentContract.V
     }
 
     @Override
-    public void hideFilterList() {
-        this.cartItemRv.setVisibility(View.GONE);
-
-    }
+    public void hideFilterList() { this.cartItemRv.setVisibility(View.GONE); }
 
     @Override
     public void showFilterList() {

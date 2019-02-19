@@ -16,6 +16,7 @@ import com.burcutopcu.hearthstonebasics.mainBottomNavView.constants.BottomNaviga
 import com.burcutopcu.hearthstonebasics.mainBottomNavView.interfaces.IBottomNavigationViewClickListener;
 
 public class MainBottomNavigationView extends LinearLayout {
+
     private Context mContext;
     private IBottomNavigationViewClickListener mClickListener;
 
@@ -69,7 +70,6 @@ public class MainBottomNavigationView extends LinearLayout {
     public void initializeSearchTab(){
         activateSearch();
         deActivateFilter();
-
     }
 
     public void initializeFilterTab(){

@@ -2,6 +2,7 @@ package com.burcutopcu.hearthstonebasics.network.services;
 
 import com.burcutopcu.hearthstonebasics.models.CardModel;
 import com.burcutopcu.hearthstonebasics.models.GeneralInfoModel;
+import com.google.gson.JsonObject;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -26,7 +27,7 @@ public interface HearthStoneService {
     /**
      * The get request to provide hearth stone search info from api
      *
-     * @return general info model
+     * @return card model
      * @author burcutopcu
      * @since 1.0
      * @see CardModel
@@ -38,7 +39,7 @@ public interface HearthStoneService {
     /**
      * The get request to provide hearth stone filtered class info from api
      *
-     * @return general info model
+     * @return card model
      * @author burcutopcu
      * @since 1.0
      * @see CardModel
@@ -50,7 +51,7 @@ public interface HearthStoneService {
     /**
      * The get request to provide hearth stone detiled card class info from api
      *
-     * @return general info model
+     * @return card model
      * @author burcutopcu
      * @since 1.0
      * @see CardModel

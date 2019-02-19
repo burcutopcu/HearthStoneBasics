@@ -1,5 +1,7 @@
 package com.burcutopcu.hearthstonebasics.mainActivity;
 
+import android.content.Intent;
+
 public interface MainActivityContract {
 
     interface View{

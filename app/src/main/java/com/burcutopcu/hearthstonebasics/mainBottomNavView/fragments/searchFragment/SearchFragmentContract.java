@@ -35,6 +35,5 @@ public interface SearchFragmentContract {
         void onReceivedSearchWord(String searchWord);
 
         void onReceivedClickedItem(String name);
-
     }
 }

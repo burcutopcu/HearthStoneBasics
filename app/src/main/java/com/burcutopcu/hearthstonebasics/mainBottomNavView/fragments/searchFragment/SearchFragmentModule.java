@@ -20,6 +20,4 @@ public class SearchFragmentModule {
         return new HearthStoneRepo(apiManager);
     }
 
-
-
 }

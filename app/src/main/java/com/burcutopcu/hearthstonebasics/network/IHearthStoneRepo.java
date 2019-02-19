@@ -3,6 +3,7 @@ package com.burcutopcu.hearthstonebasics.network;
 import com.burcutopcu.hearthstonebasics.api.IServiceResponseCallback;
 import com.burcutopcu.hearthstonebasics.models.CardModel;
 import com.burcutopcu.hearthstonebasics.models.GeneralInfoModel;
+import com.google.gson.JsonObject;
 
 import java.util.List;
 

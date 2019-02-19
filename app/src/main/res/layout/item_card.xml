@@ -28,16 +28,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/card_item_name_tv"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                android:text="hello"/>
+                android:textSize="18sp"/>
 
         <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/card_item_desc_tv"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:text="hello"/>
+                android:gravity="center_vertical"/>
 
     </LinearLayout>
 

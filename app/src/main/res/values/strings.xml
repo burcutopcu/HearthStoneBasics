@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HearthStoneBasics</string>
+    <string name="app_name">HearthCards</string>
     <string name="search">Search Cards</string>
     <string name="thereIsNoResult">There is no result</string>
 </resources>

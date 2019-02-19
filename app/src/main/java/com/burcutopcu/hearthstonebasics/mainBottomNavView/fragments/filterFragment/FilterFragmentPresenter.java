@@ -4,11 +4,14 @@ import com.burcutopcu.hearthstonebasics.api.IServiceResponseCallback;
 import com.burcutopcu.hearthstonebasics.helper.intentHelper.IntentHelper;
 import com.burcutopcu.hearthstonebasics.helper.modelParseHelper.GeneralInfoModelParseHelper;
 import com.burcutopcu.hearthstonebasics.helper.modelParseHelper.SearchAndFilterModelParseHelper;
+import com.burcutopcu.hearthstonebasics.helper.preferencesHelper.ISharedPreferencesManagement;
 import com.burcutopcu.hearthstonebasics.models.CardModel;
 import com.burcutopcu.hearthstonebasics.models.GeneralInfoModel;
 import com.burcutopcu.hearthstonebasics.network.IHearthStoneRepo;
 import com.burcutopcu.hearthstonebasics.network.repo.HearthStoneRepo;
 
+import com.burcutopcu.hearthstonebasics.util.PreferencesKeys;
+import com.google.gson.Gson;
 import org.jetbrains.annotations.Nullable;
 
 import javax.inject.Inject;
@@ -37,6 +40,12 @@ public class FilterFragmentPresenter implements FilterFragmentContract.Presenter
     @Inject
     IntentHelper mIntentHelper;
 
+    @Inject
+    ISharedPreferencesManagement mSharedPreferencesManagement;
+
+    @Inject
+    Gson mGson;
+
     @Override
     public void setView(FilterFragmentContract.View view) {
 
@@ -46,28 +55,43 @@ public class FilterFragmentPresenter implements FilterFragmentContract.Presenter
     @Override
     public void onCreateView() {
         this.mView.showProgress();
-        mHearthStoneRepo.getGeneralInfo(new IServiceResponseCallback<GeneralInfoModel>() {
-            @Override
-            public void onServerCompleted() {
 
+        Boolean areThereInfoModels = mSharedPreferencesManagement.getAsBoolean("areThereInfoModels", false);
+
+        if (areThereInfoModels) {
+           String json= mSharedPreferencesManagement.getAsString("infoModelList", "");
+           GeneralInfoModel model= mGson.fromJson(json, GeneralInfoModel.class);
+
+            List<String> classList = mInfoModelParseHelper.getHeroClassList(model);
+            if (classList != null) {
+                mView.showSpinnerItems(classList);
             }
 
-            @Override
-            public void onServerCompleted(GeneralInfoModel generalInfoModel) {
-                List<String> classList = mInfoModelParseHelper.getHeroClassList(generalInfoModel);
-                if (classList != null) {
-                    mView.showSpinnerItems(classList);
+        } else {
+
+            mHearthStoneRepo.getGeneralInfo(new IServiceResponseCallback<GeneralInfoModel>() {
+                @Override
+                public void onServerCompleted() {
+
                 }
 
-            }
+                @Override
+                public void onServerCompleted(GeneralInfoModel generalInfoModel) {
+                    List<String> classList = mInfoModelParseHelper.getHeroClassList(generalInfoModel);
+                    if (classList != null) {
+                        mView.showSpinnerItems(classList);
+                    }
 
-            @Override
-            public void onServerError(@Nullable String error) {
-                mView.hideProgress();
-                mView.hideFilterList();
-                mView.showNoResultView();
-            }
-        });
+                }
+
+                @Override
+                public void onServerError(@Nullable String error) {
+                    mView.hideProgress();
+                    mView.hideFilterList();
+                    mView.showNoResultView();
+                }
+            });
+        }
     }
 
     @Override

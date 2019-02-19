@@ -29,7 +29,6 @@ public class SearchCardAdapter extends RecyclerView.Adapter<SearchCardAdapter.Se
     private List<CardModel> searchCardModelArrayList;
     private PicassoImageHelper mImageHelper;
 
-
     @Inject
     IntentHelper mIntentHelper;
 

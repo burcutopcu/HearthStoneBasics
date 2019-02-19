@@ -6,6 +6,7 @@ import com.burcutopcu.hearthstonebasics.models.CardModel;
 import com.burcutopcu.hearthstonebasics.models.GeneralInfoModel;
 import com.burcutopcu.hearthstonebasics.network.IHearthStoneRepo;
 import com.burcutopcu.hearthstonebasics.network.services.HearthStoneService;
+import com.google.gson.JsonObject;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

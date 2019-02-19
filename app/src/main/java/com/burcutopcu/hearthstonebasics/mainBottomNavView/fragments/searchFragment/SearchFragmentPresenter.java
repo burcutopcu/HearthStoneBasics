@@ -1,12 +1,10 @@
 package com.burcutopcu.hearthstonebasics.mainBottomNavView.fragments.searchFragment;
 
-import android.text.TextWatcher;
 import com.burcutopcu.hearthstonebasics.api.IServiceResponseCallback;
 import com.burcutopcu.hearthstonebasics.helper.intentHelper.IntentHelper;
 import com.burcutopcu.hearthstonebasics.helper.modelParseHelper.SearchAndFilterModelParseHelper;
 import com.burcutopcu.hearthstonebasics.models.CardModel;
 import com.burcutopcu.hearthstonebasics.network.IHearthStoneRepo;
-import com.burcutopcu.hearthstonebasics.network.repo.HearthStoneRepo;
 import org.jetbrains.annotations.Nullable;
 
 import javax.inject.Inject;
@@ -26,8 +24,6 @@ public class SearchFragmentPresenter implements SearchFragmentContract.Presenter
 
     @Inject
     SearchAndFilterModelParseHelper mInfoModelParseHelper;
-
-
 
     @Inject
     IntentHelper mIntentHelper;
